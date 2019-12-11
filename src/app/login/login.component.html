@@ -1,0 +1,87 @@
+
+<!-- <div>
+    <label>
+      <input type="text" [formControl]="userdata" placeholder="Email">
+    </label>
+
+  </div>
+  <p>
+    Value: {{ userdata.value }}
+  </p>
+  <p>
+    <button (click)="updateName()">Update Name</button>
+  </p> -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Clever SRL</span>
+      
+      <span class="example-spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Requests</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>All Users</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Profile</span>
+          </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="main-div">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      Login
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="loginForm" >
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field appearance="outline" class="example-full-width">
+                  <mat-label>
+                    Email
+                  </mat-label>
+                <input matInput formControlName="email" name="username" required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+            <td>
+              <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>
+                    Password
+                </mat-label>
+                <input matInput formControlName="password" type="password" name="password" required>
+              </mat-form-field>
+            </td>
+          </tr></table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button type="submit" (click)="login()" color="primary">Login</button>
+    </mat-card-actions>
+</mat-card>
+</div>
+  <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      <input type="text" formControlName="email" placeholder="Email" required>
+    </label>
+    <br>
+    <label>
+      <input type="password" formControlName="password" placeholder="Password" required>
+    </label>
+    <br>
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+  </form> -->
+
