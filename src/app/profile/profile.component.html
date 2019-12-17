@@ -1,15 +1,13 @@
 <div class="body">
 
 
-  <!-- <mat-card class= "Card">Simple card</mat-card>
-    <mat-card-image> <img [src]= "url" width=100%></mat-card-image> -->
   <div class="bigBigContainer">
 
      <form class="event-creation-display">
         <div class="fileInput" matTooltip="Click to upload photo">
           <input type="file" (change)="onFileSelected($event)"  id="file-input">
           <label for="file-input">
-            <!-- <img [src]="url"> -->
+            <img [src]="url">
           </label>
         </div>
       </form>
@@ -19,6 +17,7 @@
       <br>
       <div class="register-container" >
         <div class = "leftCol">
+          <!-- <mat-card> -->
             <mat-form-field>
               <input matInput [(ngModel)]="firstname" placeholder="First Name" required>
             </mat-form-field>
@@ -28,7 +27,7 @@
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput [(ngModel)]="email" disabled placeholder="Email" required >
+              <input matInput [(ngModel)]="email" placeholder="Email" required >
             </mat-form-field>
 
             <mat-form-field>
@@ -36,20 +35,18 @@
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput [(ngModel)]="role" disabled placeholder="Role" required >
+              <input matInput [(ngModel)]="role" placeholder="Role" required >
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput [(ngModel)]="date" disabled placeholder="Date" required >
+              <input matInput [(ngModel)]="date" placeholder="Date" required >
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput [(ngModel)]="consultinglevel" disabled placeholder="Consulting Level" required >
-            </mat-form-field>
-          
-
+              <input matInput [(ngModel)]="consultinglevel" placeholder="Consulting Level" required >
+            </mat-form-field> 
+          <!-- </mat-card> -->
       </div>
-     
 
         
         <button type="save" (click)="saveProfile()" mat-flat-button class="register-button">
