@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
 		// } else {
 		// 	console.warn(this.loginForm.value);
 		// 	alert("Invalid credentials");
+		// 	alert("Invalid credentials");
 		// }
 	}
 
