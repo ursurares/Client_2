@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
 	userLogin:UserLogin;
 	json;
-	
+
 	constructor(private router: Router,private http:HttpClient) { }
 
 	ngOnInit() {
@@ -74,17 +74,18 @@ export class LoginComponent implements OnInit {
 	//   }
 
 	user: User = {
-		id: 1,
-		first_name: "Ion",
-		last_name: "Popescu",
-		region: "Cluj",
-		email: "ion.popescu@cleversrl.ro",
-		password: "parola123",
-		supervisor_id: "2",
-		phone: "0712345678",
-		role: "developer",
-		date: new Date(2018, 10, 11),
-		consulting_level: "Junior Consultant"
+		id: "1",
+		first_name:"Ion",
+		last_name:"Popescu",
+		email:"ion.popescu@cleversrl.ro",
+		password:"parola123",
+		supervisor_id:"2",
+		phone:"0712345678",
+		role:"developer",
+		date: "2018-10-11 ",
+		consulting_level:"Junior Consultant",
+		region: "aaa",
+		photo: ""
 	};
 
 
