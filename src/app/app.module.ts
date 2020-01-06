@@ -13,13 +13,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {
   MatButtonModule, MatFormFieldModule, MatInputModule, MatChipsModule, MatAutocompleteModule, MatIconModule, MatSelectModule, MatDividerModule, MatCardModule, MatExpansionModule, MatNavList, MatListModule, MatRadioButton, MatRadioModule, MatCheckbox, MatCheckboxModule, MatProgressBar, MatProgressBarModule
 } from '@angular/material';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

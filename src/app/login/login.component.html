@@ -11,30 +11,7 @@
   <p>
     <button (click)="updateName()">Update Name</button>
   </p> -->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Clever SRL</span>
-      
-      <span class="example-spacer"></span>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Requests</span>
-          </button>
-          <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>All Users</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Profile</span>
-          </button>
-        </mat-menu>
-    </mat-toolbar-row>
-</mat-toolbar>
+<app-toolbar></app-toolbar>
 <div class="main-div">
 <mat-card class="example-card">
   <mat-card-header>
