@@ -19,13 +19,7 @@
     <br>
 
     <mat-form-field>
-      <input matInput [(ngModel)]="lastname" placeholder="Last Name" required >
-    </mat-form-field>
-    <br>
-
-    
-    <mat-form-field>
-      <input matInput [(ngModel)]="role" placeholder="Role" required >
+      <input matInput [(ngModel)]="lastname" id="lastName" placeholder="Last Name" required >
     </mat-form-field>
     <br>
 
@@ -38,6 +32,14 @@
       <input matInput [(ngModel)]="consultinglevel" placeholder="Consulting Level" required >
     </mat-form-field> 
     <br>
+    <button onclick="edit()">Edit</button>
+
+    <!-- <script>
+      function edit() {
+        var l = document.getElementsById('lastName').value;
+        alert(l);
+      }
+      </script> -->
   </mat-card-actions>
 </mat-card>
 
@@ -53,6 +55,8 @@
       </mat-form-field>
       <br>
 
+      <button onclick="edit()">Edit</button>
+
   </mat-card-actions>
 </mat-card>
 
@@ -67,6 +71,8 @@
       <mat-form-field>
         <input matInput [(ngModel)]="role" placeholder="Role" required >
       </mat-form-field>
+
+      <button onclick="edit()">Edit</button>
 
   </mat-card-actions>
 </mat-card>
