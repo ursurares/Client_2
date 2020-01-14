@@ -33,21 +33,10 @@ export class LoginComponent implements OnInit {
 			password: this.loginForm.get('password').value
 		}
 		console.log(postData);
-		// this.userLogin.username=this.loginForm.get('email').value;
-		// this.userLogin.password=this.loginForm.get('password').value;
 		this.http.post("http://localhost:8080/users",postData).toPromise().then((data:any)=>{
 			console.log(data);
 			this.json=JSON.stringify(data.json);
 		})
-		// if (this.loginForm.get('email').value == 'admin@clever.com' && this.loginForm.get('password').value == 'admin') {
-		// 	console.warn(this.loginForm.value);
-		// 	alert("Nice");
-		// 	//this.router.navigate(["user"]);
-		// } else {
-		// 	console.warn(this.loginForm.value);
-		// 	alert("Invalid credentials");
-		// 	alert("Invalid credentials");
-		// }
 	}
 
 
@@ -70,10 +59,6 @@ export class LoginComponent implements OnInit {
 				}
 			);
 	}
-	// updateName() {
-	// 	this.userdata.setValue('Gigel');
-	//   }
-
 	user: User = {
 		id: "1",
 		first_name:"Ion",
