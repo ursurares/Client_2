@@ -1,63 +1,86 @@
-<div class="body">
+<mat-card class="container">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>Edit Profile</mat-card-title>
+  </mat-card-header>
 
-  <app-toolbar></app-toolbar>
-
-  <!-- <mat-card class= "Card">Simple card</mat-card>
-    <mat-card-image> <img [src]= "url" width=100%></mat-card-image> -->
-  <div class="bigBigContainer">
-
-     <form class="event-creation-display">
-        <div class="fileInput" matTooltip="Click to upload photo">
-          <input type="file" (change)="onFileSelected($event)"  id="file-input">
-          <label for="file-input">
-            <!-- <img [src]="url"> -->
-          </label>
-        </div>
-      </form>
-    <div class="bigContainer">
-
-      <div class = "label">Edit profile</div>
-      <br>
-      <div class="register-container" >
-        <div class = "leftCol">
-            <mat-form-field>
-              <input matInput [(ngModel)]="firstname" placeholder="First Name" required>
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput [(ngModel)]="lastname" placeholder="Last Name" required >
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput [(ngModel)]="email" disabled placeholder="Email" required >
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput type="tel" pattern="^07(.*)" [(ngModel)]="phone" placeholder="Phone Number" maxlength="10" minlength="10" required>
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput [(ngModel)]="role" disabled placeholder="Role" required >
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput [(ngModel)]="date" disabled placeholder="Date" required >
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput [(ngModel)]="consultinglevel" disabled placeholder="Consulting Level" required >
-            </mat-form-field>
-          
-
-      </div>
-     
-
-        
-        <button type="save" (click)="saveProfile()" mat-flat-button class="register-button">
-          Save 
-        </button>
-      </div> 
-
+  <div class="fileInput" matTooltip="Click to upload photo">
+    <input type="file" (change)="onFileSelected($event)"  id="file-input">
+    <label for="file-input">
+      <img [src]="url">
+    </label>
   </div>
-</div>
-</div>
+
+
+  <mat-card-actions class="input">
+    <mat-form-field>
+      <input matInput [(ngModel)]="firstname" placeholder="First Name" required>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="lastname" id="lastName" placeholder="Last Name" required >
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="region" placeholder="Region" required>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="consultinglevel" placeholder="Consulting Level" required >
+    </mat-form-field> 
+    <br>
+    <button onclick="edit()">Edit</button>
+
+    <!-- <script>
+      function edit() {
+        var l = document.getElementsById('lastName').value;
+        alert(l);
+      }
+      </script> -->
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="skillContainer">
+  <mat-card-actions>
+      <mat-form-field>
+        <input matInput [(ngModel)]="skill" placeholder="Skills" required>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="technology" placeholder="Technologies" required >
+      </mat-form-field>
+      <br>
+
+      <button onclick="edit()">Edit</button>
+
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="project">
+  <mat-card-actions>
+    <mat-form-field>
+      <input matInput [(ngModel)]="date" placeholder="Date" required >
+    </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="currentProject" placeholder="Current Project/Last Project" required >
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="role" placeholder="Role" required >
+      </mat-form-field>
+
+      <button onclick="edit()">Edit</button>
+
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="smallContainer">
+  <mat-card-actions>
+    <button mat-button color="primary">Save</button>
+  </mat-card-actions>
+</mat-card>
+
+
