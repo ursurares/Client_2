@@ -13,8 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {
   MatButtonModule, MatFormFieldModule, MatInputModule, MatChipsModule, MatAutocompleteModule, MatIconModule, MatSelectModule, MatDividerModule, MatCardModule, MatExpansionModule, MatNavList, MatListModule, MatRadioButton, MatRadioModule, MatCheckbox, MatCheckboxModule, MatProgressBar, MatProgressBarModule
 } from '@angular/material';
-//import { ProfileCardComponent } from './profile-card/profile-card.component';
-//import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -22,8 +23,9 @@ import {
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    //ProfileCardComponent,
-    //ViewProfileComponent
+    ToolbarComponent,
+    ViewProfileComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
