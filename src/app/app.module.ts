@@ -23,9 +23,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    ToolbarComponent
-    ViewProfileComponent
-    ProfileCardComponent,
+    ToolbarComponent,
+    ViewProfileComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
