@@ -36,6 +36,10 @@ export class LoginComponent implements OnInit {
 		this.http.post("http://localhost:8080/users",postData).toPromise().then((data:any)=>{
 			console.log(data);
 			this.json=JSON.stringify(data.json);
+			console.log(this.json);
+			if(data != null){
+				this.router.navigate(['profile/'+data.id]);
+			}
 		})
 	}
 
