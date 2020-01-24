@@ -101,9 +101,7 @@ export class ProfileComponent implements OnInit {
     user.photo = this.image;
     console.log("photo edit");
     console.log(user.photo);
-    this.service.saveProfile(user).subscribe(()=>{
-       this.router.navigate(["/login"]);
-    });
+    this.service.saveProfile(user).subscribe();
   }
 
 }

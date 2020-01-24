@@ -29,7 +29,7 @@ export class UserService {
   }
 
   public saveProfile(user : User): Observable<any> {
-    return this.http.post(this.urlBase+'userProfile', user);
+    return this.http.put(this.urlBase+'users', user);
   }
 
 }
