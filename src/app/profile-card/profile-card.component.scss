@@ -1,0 +1,33 @@
+.card{
+    margin-top: 2%;
+    background-color: rgba(26, 99, 121, 0.562);
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    width: 590px;
+    height: 80px;
+    margin-left:15%;
+}
+
+.content{
+    //margin-bottom:px;
+    color: #e6e6e6d8;
+}
+
+.details {
+    margin-top:auto;
+  }
+
+.example-header-image {
+    background-size: cover;
+  }
+img {
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.title{
+    color:black;
+}
+

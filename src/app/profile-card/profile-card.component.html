@@ -1,0 +1,23 @@
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar *ngIf="user.photo">
+            <img mat-card-sm-image [src]="user.photo" class="photo">
+        </div>
+        <div mat-card-avatar *ngIf="user.photo===null">
+            <img mat-card-sm-image src="assets/user.png" class="photo">
+        </div>
+        <div>
+    <mat-card-title class="title">{{user.firstName}} {{user.lastName}}</mat-card-title>
+    
+      <mat-card-subtitle class="subtitle">- User - </mat-card-subtitle>
+      <p >
+          <b>Email:</b> {{user.email}}
+          </p>
+    </div>
+    </mat-card-header>
+      <mat-card-content >
+      
+
+    </mat-card-content> 
+
+  </mat-card>
