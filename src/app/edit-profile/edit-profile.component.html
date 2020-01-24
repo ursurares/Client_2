@@ -1,0 +1,90 @@
+<div class="profile">
+  
+    <mat-card class="container">
+      <mat-card-header>
+        <div mat-card-avatar></div>
+        <mat-card-title>Edit Profile</mat-card-title>
+      </mat-card-header>
+    
+      <div class="fileInput" matTooltip="Click to upload photo">
+        <input type="file" (change)="onFileSelected($event)"  id="file-input">
+        <label for="file-input">
+          <img [src]="url">
+        </label>
+      </div>
+    
+    
+      <mat-card-actions class="input">
+        <mat-form-field>
+          <input matInput [(ngModel)]="firstname" placeholder="First Name" required>
+        </mat-form-field>
+        <br>
+    
+        <mat-form-field>
+          <input matInput [(ngModel)]="lastname" id="lastName" placeholder="Last Name" required >
+        </mat-form-field>
+        <br>
+    
+        <mat-form-field>
+          <input matInput [(ngModel)]="region" placeholder="Region" required>
+        </mat-form-field>
+        <br>
+    
+        <mat-form-field>
+          <input matInput [(ngModel)]="consultinglevel" placeholder="Consulting Level" required >
+        </mat-form-field> 
+        <br>
+        <button onclick="edit()">Edit</button>
+    
+        <!-- <script>
+          function edit() {
+            var l = document.getElementsById('lastName').value;
+            alert(l);
+          }
+          </script> -->
+      </mat-card-actions>
+    </mat-card>
+    
+    <mat-card class="skillContainer">
+      <mat-card-actions>
+          <mat-form-field>
+            <input matInput [(ngModel)]="skill" placeholder="Skills" required>
+          </mat-form-field>
+          <br>
+    
+          <mat-form-field>
+            <input matInput [(ngModel)]="technology" placeholder="Technologies" required >
+          </mat-form-field>
+          <br>
+    
+          <button onclick="edit()">Edit</button>
+    
+      </mat-card-actions>
+    </mat-card>
+    
+    <mat-card class="project">
+      <mat-card-actions>
+        <mat-form-field>
+          <input matInput [(ngModel)]="date" placeholder="Date" required >
+        </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="currentProject" placeholder="Current Project/Last Project" required >
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="role" placeholder="Role" required >
+          </mat-form-field>
+    
+          <button onclick="edit()">Edit</button>
+    
+      </mat-card-actions>
+    </mat-card>
+    
+  
+    <mat-card class="smallContainer">
+        <mat-card-actions>
+          <button mat-button (click)="saveProfile()" color="primary">Save</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+    
