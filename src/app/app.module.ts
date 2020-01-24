@@ -15,7 +15,7 @@ import {
 } from '@angular/material';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -23,9 +23,9 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    ProfileCardComponent,
+    ToolbarComponent,
     ViewProfileComponent,
-    EditProfileComponent
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
