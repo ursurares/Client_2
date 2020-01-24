@@ -13,13 +13,15 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  private urlBase = 'http://localhost:8080/';
+
   public getUsers(): Observable<User[]>{
-    const url = 'http://localhost:8130/allUsers';
+    const url = 'allUsers';
     return this.http.get<User[]>(url);
   }
 
   public getUser(): Observable<User> {
-    const url = 'http://localhost:8130/userProfile';
+    const url = this.urlBase+'userProfile';
     // const httpOptions = {
     //   headers: new HttpHeaders({'token': this.service.getJwtToken()})
     // };
@@ -27,7 +29,7 @@ export class UserService {
   }
 
   public saveProfile(user : User): Observable<any> {
-    return this.http.post('http://localhost:8130/userProfile', user);
+    return this.http.post(this.urlBase+'userProfile', user);
   }
 
 }
