@@ -31,12 +31,19 @@ export class ProfileComponent implements OnInit {
   constructor(private service: UserService, public router: Router) { }
 
   ngOnInit() {
-    this.service.getUser().subscribe(data=> {
-      this.user = data;
-      if(this.user) {
-         this.setFormInfo(this.user.first_name, this.user.last_name, this.user.region, this.user.email, this.user.password, this.user.supervisor_id, this.user.phone, this.user.role, this.user.date, this.user.consulting_level, this.user.photo);
-       }
-   });
+    this.user = JSON.parse(window.localStorage.getItem('user'));
+    console.log("LocalStorage:",window.localStorage.getItem('user'));
+    console.log("This.user",this.user);
+    if(this.user){
+      this.setFormInfo(this.user.first_name, this.user.last_name, this.user.region, this.user.email, this.user.password, this.user.supervisor_id, this.user.phone, this.user.role, this.user.date, this.user.consulting_level, this.user.photo);
+    }
+    // this.service.getUser().subscribe(data=> {
+    //   console.log("o intrat")
+    //   this.user = data;
+    //   if(this.user) {
+    //      this.setFormInfo(this.user.first_name, this.user.last_name, this.user.region, this.user.email, this.user.password, this.user.supervisor_id, this.user.phone, this.user.role, this.user.date, this.user.consulting_level, this.user.photo);
+    //    }
+    // });
 
   }
 
@@ -94,9 +101,7 @@ export class ProfileComponent implements OnInit {
     user.photo = this.image;
     console.log("photo edit");
     console.log(user.photo);
-    this.service.saveProfile(user).subscribe(()=>{
-       this.router.navigate(["/login"]);
-    });
+    this.service.saveProfile(user).subscribe();
   }
 
 }

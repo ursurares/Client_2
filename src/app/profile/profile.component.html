@@ -1,3 +1,5 @@
+
+<app-toolbar></app-toolbar>
 <div class="profile">
   
 <mat-card class="container">
@@ -16,12 +18,12 @@
 
   <mat-card-actions class="input">
     <mat-form-field>
-      <input matInput [(ngModel)]="firstname" placeholder="First Name" required>
+      <input matInput [(ngModel)]="first_name" placeholder="First Name" required>
     </mat-form-field>
     <br>
 
     <mat-form-field>
-      <input matInput [(ngModel)]="lastname" id="lastName" placeholder="Last Name" required >
+      <input matInput [(ngModel)]="last_name" id="lastName" placeholder="Last Name" required >
     </mat-form-field>
     <br>
 
@@ -31,7 +33,7 @@
     <br>
 
     <mat-form-field>
-      <input matInput [(ngModel)]="consultinglevel" placeholder="Consulting Level" required >
+      <input matInput [(ngModel)]="consulting_level" placeholder="Consulting Level" required >
     </mat-form-field> 
     <br>
     <button onclick="edit()">Edit</button>
